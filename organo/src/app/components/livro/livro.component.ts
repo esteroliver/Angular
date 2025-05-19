@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, input, InputSignal} from '@angular/core';
 import { Livro } from './livro';
 
 @Component({
@@ -9,18 +9,10 @@ import { Livro } from './livro';
 })
 export class LivroComponent {
 
+  livro: InputSignal<Livro> = input.required<Livro>();
+
   alternarFavorito(){
-    this.livro.favorito = !this.livro.favorito;
+    this.livro().favorito = !this.livro().favorito;
   }
 
-  livro : Livro = {
-    titulo: "As ondas",
-    autoria: "Virginia Wolf",
-    capa: "https://books.google.com.br/books/publisher/content?id=K88vEAAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U17ilHei2sAJISd9dgpqzbnbgyUBw&w=1280",
-    favorito: false,
-    genero: {
-      id: "romance",
-      value: "romance"
-    }
-  }
 }

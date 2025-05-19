@@ -1,12 +1,12 @@
 <section>
   <button class="favorito-btn" (click)="alternarFavorito()">
-    <span>{{ livro.favorito ? '\u2764' : '\u2661'}}</span>
+    <span>{{ livro().favorito ? '\u2764' : '\u2661'}}</span>
   </button>
   <div class="capa">
-    <img [src]="livro.capa" [alt]="livro.titulo">
+    <img [src]="livro().capa" [alt]="livro().titulo">
   </div>
   <div class="info-livro">
-    <h2 class="titulo">{{livro.titulo}}</h2>
-    <h3 class="autoria">{{livro.autoria}}</h3>
+    <h2 class="titulo">{{livro().titulo}}</h2>
+    <h3 class="autoria">{{livro().autoria}}</h3>
   </div>
 </section>
