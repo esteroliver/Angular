@@ -1,4 +1,4 @@
-import { GeneroLiterario } from './genero-literario';
+import { GeneroLiterario } from '../genero-literario/genero-literario';
 
 export interface Livro {
   titulo: string;
