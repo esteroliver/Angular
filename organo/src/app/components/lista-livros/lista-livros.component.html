@@ -3,3 +3,7 @@
   <span class="linha-destaque linha-destaque--grande">
   </span>
 </section>
+@for (genero of generos_lista; track genero){
+  <app-genero-literario [genero]="genero"></app-genero-literario>
+}
+

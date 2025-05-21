@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, InputSignal} from '@angular/core';
 import { LivroComponent } from '../livro/livro.component';
-import {Livro} from '../livro/livro';
-import {livros} from '../../mock-livros';
+import { input } from '@angular/core';
+import {ListaGeneroLiterario} from '../lista-livros/lista-genero';
 
 @Component({
   selector: 'app-genero-literario',
@@ -10,5 +10,5 @@ import {livros} from '../../mock-livros';
   styleUrl: './genero-literario.component.css'
 })
 export class GeneroLiterarioComponent {
-  livro_gen: Livro = livros[0];
+  genero : InputSignal<ListaGeneroLiterario> = input.required<ListaGeneroLiterario>();
 }
