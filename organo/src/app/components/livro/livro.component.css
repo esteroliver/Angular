@@ -12,6 +12,7 @@ section {
   padding-top: 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin-left: 64px;
+  border-top: 24px solid;
 }
 
 section .capa {
@@ -71,4 +72,24 @@ section .info-livro > * {
   line-height: 20px;
   text-align: center;
   color: var(--color-secundaria);
+}
+
+.romance {
+  border-color: #82CFFA;
+}
+
+.misterio {
+  border-color: #A6D157;
+}
+
+.fantasia {
+  border-color: #E06B69;
+}
+
+.ficcao-cientifica {
+  border-color: #DB6EBF;
+}
+
+.tecnicos {
+  border-color: #FF8A29;
 }
