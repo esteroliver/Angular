@@ -2,4 +2,4 @@
 Repositório dedicado aos meus estudos da framework Angular.
 
 ## Projetos
-[Organo - Organização de Leituras](https://github.com/esteroliver/Angular/organo)
+[Organo - Organização de Leituras](https://github.com/esteroliver/Angular/tree/main/organo)
