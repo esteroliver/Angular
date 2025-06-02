@@ -1,6 +1,7 @@
 <div class="app">
   <div class="banner-form-wrapper">
     <app-banner />
-    <app-form-nova-transacao (transacao)="processarTransacao()" />
+    <app-form-nova-transacao (transacao)="processarTransacao($event)" />
+    <p>{{ saldo() }}</p>
   </div>
 </div>
