@@ -1,0 +1,8 @@
+<div class="transacao">
+    @if(transacao().tipo == tipoTransacao.SAQUE){
+        <span class="valor">-{{ transacao().valor | currency:"BRL"}}</span>
+    } @else {
+        <span class="valor">{{ transacao().valor | currency:"BRL"}}</span>
+    }
+    <span class="data">{{ transacao().data | date:"dd/MM/yyyy"}}</span>
+</div>
