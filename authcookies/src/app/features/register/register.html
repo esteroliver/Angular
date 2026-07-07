@@ -1,26 +1,31 @@
-<form [formGroup]="form" (ngSubmit)="submit()">
+<form [formGroup]="form" (ngSubmit)="submit()" class="flex flex-col gap-2 m-4 max-w-[20rem]">
   <label>
     E-mail:
-    <input type="email" formControlName="email">
+    <input type="email" formControlName="email" [class]="estiloInput">
   </label>
 
   <label>
     Nome:
-    <input type="text" formControlName="nome">
+    <input type="text" formControlName="nome" [class]="estiloInput">
   </label>
   <label>
     Senha:
-    <input type="password" formControlName="senha">
+    <input type="password" formControlName="senha" [class]="estiloInput">
   </label>
   <label>
     Papel:
-    <select name="" id="" formControlName="papel">
+    <select name="" id="" formControlName="papel" [class]="estiloSelect">
+      <option [value]="null" selected disabled>Selecione o papel</option>
       <option [value]="papel.CLIENTE">Cliente</option>
       <option [value]="papel.GESTOR">Gestor</option>
     </select>
   </label>
 
-  <button type="submit">
+  <button type="submit" [class]="estiloBotao">
     Cadastrar-se
   </button>
 </form>
+
+<a [routerLink]="['/login']">
+  Já possui uma conta? Entre nela agora
+</a>

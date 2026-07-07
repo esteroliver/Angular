@@ -1,15 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { email } from '@angular/forms/signals';
 import { Papel } from '../../core/models/usuario';
 import { UsuarioService } from '../../core/services/usuario.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-register',
-  imports: [ReactiveFormsModule],
-  templateUrl: './register.html',
-  styleUrl: './register.css',
+  imports: [ReactiveFormsModule, RouterModule],
+  templateUrl: './register.html'
 })
 export class Register {
   private fb = inject(FormBuilder);
@@ -18,6 +16,10 @@ export class Register {
 
   form! : FormGroup;
   papel = Papel;
+
+  estiloBotao = 'bg-blue-300 p-2 rounded-md font-semibold text-blue-800 cursor-pointer transisition transisition-all hover:bg-blue-200';
+  estiloSelect = 'border border-gray-300 rounded-md p-1 w-full';
+  estiloInput = 'border border-gray-300 rounded-md w-full'
 
   ngOnInit(){
     this.form = this.fb.group({

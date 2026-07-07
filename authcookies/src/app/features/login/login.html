@@ -1,1 +1,15 @@
-<p>login works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()" class="flex flex-col gap-2 m-4 max-w-[20rem]">
+  <label>
+    E-mail:
+    <input type="email" formControlName="email" [class]="estiloInput">
+  </label>
+
+  <label>
+    Senha:
+    <input type="password" formControlName="senha" [class]="estiloInput">
+  </label>
+
+  <button type="submit" [class]="estiloBotao">
+    Entrar
+  </button>
+</form>
